@@ -27,3 +27,12 @@ class LED(threading.Thread):
      def end(self):
           self.stop_flag = True
           self.join()
+          
+          
+          
+if __name__ == "__main__":
+     led = LED(37) # connect pin 37 to LED
+     led.start()
+     for i in range(5):
+          led.blink(interval=0.5,times=5) 
+     led.end()
