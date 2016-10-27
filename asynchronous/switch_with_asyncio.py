@@ -10,7 +10,7 @@ def operate():
   asyncio.async(operate())
   
 if __name__ == "__main__":
-  sw = mraa.Gpio(12) # attach pin 12 to one pin of switch
+  sw = mraa.Gpio(12) # attach pin 12 to one side of switch and pin 1 (3.3v) to another side .
   led = mraa.Gpio(40) # attach pin 40 to LED
   sw.dir(mraa.DIR_IN) 
   led.dir(mraa.DIR_OUT) 
